@@ -1,15 +1,18 @@
-<% provide(:title, 'Home') %>
+<% provide('Home') %>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
+    <title> Home | <%= yield(:title) %></title>
   </head>
   <body>
-    <h1>Sample App</h1>
-    <p>
-      This is the home page for the
-      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </p>
-  </body>
+   <div class="center hero-unit">
+  <h1>Welcome to the Idea App</h1>
+
+  <%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("lightbulb.jpg", alt: "Ideas"), 'http://localhost:3000/static_pages/home#' %>
+ 
+
+</body>
 </html>
