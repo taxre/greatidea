@@ -15,7 +15,7 @@ def new
   end
 
 def create
-    @user = User.new(user_params)    
+    @user = User.new(user_params)     
     if @user.save
        flash[:success] = "Welcome to the Idea App!"
       redirect_to @user
