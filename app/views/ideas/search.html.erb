@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Search results</title>
+</head>
+<body>
+<h1>Search results</h1>
+<table border="1">
+<tr>
+<td width="40%"><p align="center"><i><b>Recipe</b></i></td>
+<td width="20%"><p align="center"><i><b>Date</b></i></td>
+</tr>
+<% @ideas.each do |ideas| %>
+<tr>
+<td>
+<%=recipe.title%>
+</a>
+</td>
+<td><%= idea.description %></td>
+</tr>
+<% end %>
+</table>
+<p> <a href="/ideas"> Back</a> </body>
+</html>
