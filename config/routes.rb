@@ -1,4 +1,6 @@
 IdeaApp::Application.routes.draw do
+  resources :ideas
+
   resources :users
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
