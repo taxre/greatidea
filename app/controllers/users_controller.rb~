@@ -16,6 +16,7 @@ def new
 
 def create
     @user = User.new(user_params)    
+    params.require(:user).permit (:name, :email, :password, :password_confirmation)   
     if @user.save
        flash[:success] = "Welcome to the Idea App!"
       redirect_to @user
