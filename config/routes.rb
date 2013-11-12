@@ -1,5 +1,8 @@
 IdeaApp::Application.routes.draw do
-  resources :ideas
+  resources :ideas do
+	  post 'search', :on => :collection
+  end
+  
 
   resources :users
   root  'static_pages#home'
