@@ -11,11 +11,8 @@
 </tr>
 <% @ideas.each do |ideas| %>
 <tr>
-<td>
-<%=recipe.title%>
-</a>
-</td>
-<td><%= idea.description %></td>
+<td><%= Idea.title %></td>
+<td><%= Idea.description %></td>
 </tr>
 <% end %>
 </table>
