@@ -1,0 +1,18 @@
+<% provide('Home') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Home | <%= yield(:title) %></title>
+  </head>
+  <body>
+   <div class="center hero-unit">
+  <h1>Welcome to the Idea App</h1>
+
+  <%= link_to "Sign up now!", 'signup', class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("lightbulb.jpg", alt: "Ideas"), 'http://localhost:3000/static_pages/home#' %>
+ 
+
+</body>
+</html>
