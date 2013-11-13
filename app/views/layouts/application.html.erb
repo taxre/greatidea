@@ -14,12 +14,19 @@
     <div class="container">
     
       <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
          <div class="alert alert-<%= key %>"><%= value %></div>
       <%end%>
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
+<<<<<<< HEAD
     </div>
     <%= csrf_meta_tags %>
 </body>
+=======
+   </div>
+  </body>
+>>>>>>> 01efd8ac1e2d2ae1650c6c479121023648d2c0f3
 </html>
+
