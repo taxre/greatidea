@@ -1,5 +1,6 @@
 <h1>Listing ideas</h1>
 
+
 <h3>Search our ideas</h3>
 <form action ="ideas/search" method="post">
 <input name = "key" type="input" />
@@ -10,7 +11,6 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Description</th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,7 +21,6 @@
     <% @ideas.each do |idea| %>
       <tr>
         <td><%= idea.title %></td>
-        <td><%= idea.description %></td>
         <td><%= link_to 'Show', idea %></td>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
         <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -32,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Idea', new_idea_path %>
+<%= link_to 'New Idea', new_idea_path %><br>
