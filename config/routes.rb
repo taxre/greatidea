@@ -2,10 +2,10 @@ IdeaApp::Application.routes.draw do
   resources :ideas do
 	  post 'search', :on => :collection
   end
-  
-
+  resources :sessions, only: [:new, :create, :destroy]
   resources :users
   root  'static_pages#home'
+  match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Idea App | <%= yield(:title) %></title>
+    <title> <%= yield(:title) %></title>
   </head>
   <body>
     <h1>Help</h1>
