@@ -1,0 +1,12 @@
+<% title "Ideas" %>
+
+<ul>
+  <% for project in @ideas %>
+    <li class="arrow">
+      <%= link_to h(idea.title), idea %>
+      <small class="counter"><%= idea.tasks.size %></small>
+    </li>
+  <% end %>
+</ul>
+
+<ul><li class="arrow"><%= link_to "New Idea", new_idea_path %></li></ul>

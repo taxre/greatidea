@@ -7,7 +7,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim'%>
-  <%= stylesheet_link_tag 'mobile' if mobile_device? %>
+  <%= render 'layouts/application.mobile' if mobile_device? %>
 </head>
 <body>
     <%= render 'layouts/header' %>
@@ -20,13 +20,10 @@
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
-<<<<<<< HEAD
     </div>
     <%= csrf_meta_tags %>
 </body>
-=======
    </div>
   </body>
->>>>>>> 01efd8ac1e2d2ae1650c6c479121023648d2c0f3
 </html>
 
