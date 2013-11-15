@@ -58,6 +58,6 @@ describe "after saving the user" do
         before { click_link "Sign out" }
         it { should have_link('Sign in') }
       end
-    end
-  end
+ end
+end
 end
